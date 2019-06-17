@@ -16,10 +16,5 @@ dropout_outcomes <- function(dat) {
   } else {
     dat$di_all_death <- 0
   }
-  if (sumdeath > 0) {
-    dat$di_onlydeath <- 1
-  } else {
-    dat$di_onlydeath <- 0
-  }
   dat
 }
