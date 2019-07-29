@@ -16,7 +16,7 @@ dropout_outcomes <- function(dat) {
   } else {
     dat$di_all_death <- 0
   }
-  dTime <- ifelse(!is.null(dat[dat$d_i.num == 1, 'obstime']), min(dat[dat$d_i.num == 1, 'obstime']), 18)
+  dTime <- ifelse(!length(dat[dat$d_i.num == 1, 'obstime']) == 0, min(dat[dat$d_i.num == 1, 'obstime']), 18)
   dat$dTime <- dTime
   dat
 }
