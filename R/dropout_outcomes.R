@@ -16,5 +16,7 @@ dropout_outcomes <- function(dat) {
   } else {
     dat$di_all_death <- 0
   }
+  dTime <- max(dat[dat$d_i.num == 0, 'obstime'])
+  dat$dTime <- dTime
   dat
 }
